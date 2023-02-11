@@ -1,0 +1,126 @@
+/* ------ Variables ------ */
+
+:root {
+  --main-color: #FFAD31;
+  --sec-color: #FFE600;
+  --base: #fafafa;
+  --light: #ffffff;
+  --dark: #333333;
+  --shadow: 15px 15px 34px #D5D5D5,
+          -15px -15px 34px #FFFFFF;
+}
+
+
+/* ------ App ------ */
+
+.App {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  position: relative;
+  margin: 60px 0;
+  padding: 30px 0;
+  width: 100%;
+  background-image: linear-gradient(90deg, var(--main-color), var(--sec-color));
+  color: var(--light);
+  border-radius: 25px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.element-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.element-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.unit-converter-box {
+  width: 85%;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  font-size: 35px;
+  padding: 5px;
+  border-radius: 12px;
+  text-align: center;
+  background-color: transparent;
+  border: 2px solid var(--main-color);
+  outline: none;
+}
+
+.select-heart {
+  width: 100%;
+  margin-bottom: 50px;
+  padding: 20px 30px;
+  background-color: var(--light);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  justify-content: space-around;
+}
+
+.save-btn {
+  margin-right: 10px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  outline: none;
+}
+
+.in-out-box {
+  width: 90%;
+  /* display: flex; */
+  margin: 0 auto;
+  /* justify-content: space-between; */
+  justify-content: space-around;
+}
+
+/*  ------- Responsive -------  */
+
+@media (max-width: 480px) {
+
+  .App {
+    width: 90%;
+  }
+
+  .header h1 {
+    font-size: 20px;
+  }
+
+  input {
+    font-size: 25px;
+    padding: 5px;
+    width: 120px;
+  }
+
+  .select-heart {
+    padding: 20px 15px;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .App {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  input {
+    font-size: 50px;
+    padding: 5px;
+    width: 300px;
+  }
+}
