@@ -2,6 +2,8 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeConversion } from '../features/unitConversions/unitConversionSlice';
 import '../assets/savedText.css';
+import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const ulStyle = {
     'list-style-type': 'none',
@@ -9,11 +11,12 @@ const ulStyle = {
     margin: '0'
 }
 
-const liStyle = {
+const btnStyle = {
     'font-size': '24px',
     border: '0px',
     cursor: 'pointer',
-    background: 'lightgrey'
+    background: 'lightgrey',
+    'margin-right': '1px'
 }
 
 const ListSavedConversions = () => {
@@ -39,9 +42,15 @@ const ListItem = ({savedConversion}) => {
         <li>
             <button 
                 onClick={ () => dispatch(removeConversion(id))}
-                style={liStyle}
+                style={btnStyle}
             >
                 { conversionFromTo }
+            </button>
+            <button
+                onClick={ () => dispatch(removeConversion(id))}
+                style={btnStyle}
+            >
+                <FontAwesomeIcon icon={faCircleXmark} />
             </button>
         </li>
     )   

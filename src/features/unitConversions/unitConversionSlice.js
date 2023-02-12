@@ -20,7 +20,7 @@ const initialState = {
   unitConversionType: KMS_TO_MILES,
   fromUnitType: KMS_UNIT_TYPE,
   toUnitType: MILES_UNIT_TYPE,
-  fromUnitVal: KMS_TO_MILES,
+  fromUnitVal: 0,
   toUnitVal: 0,
   savedConversions: [],
   lastUnitConversionId: 0
