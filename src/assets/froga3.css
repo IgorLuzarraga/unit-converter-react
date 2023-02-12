@@ -1,0 +1,104 @@
+.froga3-col-main {
+    display: flex;
+    /*to lay .block-* classes in a column*/
+    flex-direction: column;
+    /*Setting gap between the .block-* classes*/
+    gap: 2vh;
+    background: #2E0039;
+    box-shadow: 0px 0px 8px 3px #00000033;
+    border-radius: 21px;
+    padding-bottom: 10px;
+}
+
+[class^=froga3-row-] {
+    /*To lay the boxes in a row.*/
+    display: flex;
+    flex-direction: row;
+    /* height: 20vh; */
+    /* putting gap between .box-* classes*/
+    gap: 1vh;
+}
+
+[class^=froga3-box-] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    /* background-color: #c1c1c1; */
+    background: #2E0039;
+
+    font-family: sans-serif;
+    font-size: 25px;
+}
+
+.froga3-box-convert {
+    justify-content: left;
+    height: 35px;
+    width: 104px;
+    flex-basis: 100%;
+
+    /* Typography */
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    color: #FFFFFF;
+    background: #2E0039;
+    border: none;
+}
+
+.froga3-box-UnitsConversionSelector {
+    flex-basis: 45%;
+}
+
+.froga3-box-reverse-conversion {
+    flex-basis: 10%;
+    border: none;
+}
+
+.froga3-box-InputUnit {
+    flex-basis: 45%;
+}
+
+.froga3-box-save {
+    flex-basis: 10%;
+}
+
+.froga3-box-gap {
+    flex-basis: 45%;
+}
+
+.froga3-box-OutputUnit {
+    flex-basis: 45%;
+    border-color: white;
+}
+
+/* ------------------------------------- */
+/* hide arrows
+ Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0 !important;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield !important;
+}
+/* ------------------------------------- */
+
+@media (max-width: 480px) {
+    [class^=froga3-row-] {
+      flex-direction: column;
+    }
+}
+
+
+
+

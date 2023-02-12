@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeConversion } from '../features/unitConversions/unitConversionSlice';
+import '../assets/savedText.css';
 
 const ListSavedConversions = () => {
     const list = useSelector((state) => state.unitConversion.savedConversions)
@@ -28,9 +29,12 @@ const ListItem = ({savedConversion}) => {
     )   
 }
 
+// const renderSavedText = (length) => 
+//     length > 0 ? <h2 className='savedText'>Saved</h2> : <h2> </h2>
+
 const renderSavedText = (length) => 
-    length > 0 ? <h2>Saved</h2> : <h2></h2>
-        
+    length > 0 ? <h2>Saved</h2> : <h2> </h2>
+
 const renderListItems = (list) =>
     list.map((item, index) => <ListItem key={index} savedConversion={item} />)
 

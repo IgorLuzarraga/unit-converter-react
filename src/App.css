@@ -1,3 +1,19 @@
+/*Changing The Default Settings..*/
+/* * {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+} */
+
+/* changing the body*/
+/* * body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: sans-serif;
+  font-size: 45px;
+} */
+
+
 /* ------ Variables ------ */
 
 :root {
@@ -13,14 +29,14 @@
 
 /* ------ App ------ */
 
-.App {
+/* .App {
   width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .header {
   position: relative;
@@ -45,7 +61,7 @@
 }
 
 .unit-converter-box {
-  width: 85%;
+  width: 95%;
   justify-content: center;
   align-items: center;
 }
@@ -70,12 +86,18 @@ input {
   justify-content: space-around;
 }
 
-.save-btn {
+/* .save-btn {
   margin-right: 10px;
   padding: 5px;
   border: 1px solid black;
   border-radius: 5px;
   outline: none;
+} */
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .in-out-box {
@@ -88,7 +110,7 @@ input {
 
 /*  ------- Responsive -------  */
 
-@media (max-width: 480px) {
+@media (max-width: 400px) {
 
   .App {
     width: 90%;
