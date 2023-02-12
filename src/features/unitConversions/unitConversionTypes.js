@@ -6,6 +6,12 @@ const FEET_TO_METERS = "FEET_TO_METERS"
 const CMS_TO_INCHES = "CMS_TO_INCHES"
 const INCHES_TO_CMS = "INCHES_TO_CMS"
 const ERROR_NO_CONVERSION_TYPE = "ERROR_NO_CONVERSION_TYPE"
+const KMS_UNIT_TYPE = "kms"
+const MILES_UNIT_TYPE = "miles"
+const METERS_UNIT_TYPE = "meters"
+const FEET_UNIT_TYPE = "feet"
+const CMS_UNIT_TYPE = "cms"
+const INCHES_UNIT_TYPE = "inches"
 
 const fromStrToUnitConversionType = (str) => {
     switch (str) {
@@ -52,6 +58,12 @@ export {
     FEET_TO_METERS,
     CMS_TO_INCHES,
     INCHES_TO_CMS,
+    KMS_UNIT_TYPE,
+    MILES_UNIT_TYPE,
+    METERS_UNIT_TYPE,
+    FEET_UNIT_TYPE,
+    CMS_UNIT_TYPE,
+    INCHES_UNIT_TYPE,
     fromStrToUnitConversionType,
     fromUnitConversionTypeToStr
 }

@@ -6,13 +6,21 @@ import
     FEET_TO_METERS,
     CMS_TO_INCHES,
     INCHES_TO_CMS,
+    KMS_UNIT_TYPE,
+    MILES_UNIT_TYPE,
+    METERS_UNIT_TYPE,
+    FEET_UNIT_TYPE,
+    CMS_UNIT_TYPE,
+    INCHES_UNIT_TYPE
   } from './unitConversionTypes.js'
 import { fromStrToUnitConversionType } from './unitConversionTypes.js'
 import { unitConversionFactors as factors} from './unitConversionFactors.js'
 
 const initialState = {
   unitConversionType: KMS_TO_MILES,
-  fromUnitVal: 0,
+  fromUnitType: KMS_UNIT_TYPE,
+  toUnitType: MILES_UNIT_TYPE,
+  fromUnitVal: KMS_TO_MILES,
   toUnitVal: 0,
   savedConversions: [],
   lastUnitConversionId: 0
@@ -28,6 +36,14 @@ const unitConversionSlice = createSlice({
       },
       madeUnitConversion: (state) => {
         state.toUnitVal = madeUnitConversionHelper(state)
+
+         //---------------------------------
+         // Update the labels of the input (num to made the conversion)
+         // and ouput (show the result of the conversion)
+         const { fromUnitType, toUnitType } = getFromAndToUnitType(state.unitConversionType)
+         state.fromUnitType = fromUnitType
+         state.toUnitType = toUnitType
+         //----------------------------------
       },
       reverseConversion: (state) => {
         state.fromUnitVal = state.toUnitVal
@@ -50,6 +66,25 @@ const unitConversionSlice = createSlice({
 const removeItem = (arr, id) => 
   arr.filter(item => item.id !== id)
 
+const getFromAndToUnitType = (unitConversionType) => {
+  switch (unitConversionType) {
+    case KMS_TO_MILES:
+      return {fromUnitType: KMS_UNIT_TYPE, toUnitType: MILES_UNIT_TYPE}
+    case MILES_TO_KMS:
+      return {fromUnitType: MILES_UNIT_TYPE, toUnitType: KMS_UNIT_TYPE}
+    case METERS_TO_FEET:
+      return {fromUnitType: METERS_UNIT_TYPE, toUnitType: FEET_UNIT_TYPE}
+    case FEET_TO_METERS:
+      return {fromUnitType: FEET_UNIT_TYPE, toUnitType: METERS_UNIT_TYPE}
+    case CMS_TO_INCHES:
+      return {fromUnitType: CMS_UNIT_TYPE, toUnitType: INCHES_UNIT_TYPE}
+    case INCHES_TO_CMS:
+      return {fromUnitType: INCHES_UNIT_TYPE, toUnitType: CMS_UNIT_TYPE}
+    default:
+      return -1
+  }
+}
+  
 const saveConversionHelper = (state) => {
   switch (state.unitConversionType) {
     case KMS_TO_MILES:

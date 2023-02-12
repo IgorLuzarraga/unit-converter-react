@@ -15,7 +15,8 @@ const componentStyle = {
     'text-align': 'left',
     color: 'white',
     background: '#2E0039',
-    'padding-left': '10px'
+    'padding-left': '10px',
+    cursor: 'pointer'
 }
 
 const UnitsConversionSelector = ({options}) => {

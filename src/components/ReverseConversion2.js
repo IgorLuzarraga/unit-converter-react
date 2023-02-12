@@ -9,12 +9,12 @@ const componentStyle = {
     width: '32px',
     'border': '0px',
     'font-size': '20px',
-    color: 'white',
-    background: '#2E0039',
+    color: '#2E0039',
+    background: 'white',
     cursor: 'pointer'
 }
 
-const ReverseConversion = () => {
+const ReverseConversion2 = () => {
     const dispatch = useDispatch()
 
     return(
@@ -34,4 +34,4 @@ const ReverseConversion = () => {
     )
 }
 
-export default ReverseConversion
+export default ReverseConversion2

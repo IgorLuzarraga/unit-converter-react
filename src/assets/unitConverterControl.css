@@ -1,4 +1,4 @@
-.froga3-col-main {
+.unitConverterControl-col-main {
     display: flex;
     /*to lay .block-* classes in a column*/
     flex-direction: column;
@@ -10,7 +10,7 @@
     padding-bottom: 10px;
 }
 
-[class^=froga3-row-] {
+[class^=unitConverterControl-row-] {
     /*To lay the boxes in a row.*/
     display: flex;
     flex-direction: row;
@@ -19,7 +19,7 @@
     gap: 1vh;
 }
 
-[class^=froga3-box-] {
+[class^=unitConverterControl-box-] {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,7 +33,7 @@
     font-size: 25px;
 }
 
-.froga3-box-convert {
+.unitConverterControl-box-convert {
     justify-content: left;
     height: 35px;
     width: 104px;
@@ -52,28 +52,28 @@
     border: none;
 }
 
-.froga3-box-UnitsConversionSelector {
+.unitConverterControl-box-UnitsConversionSelector {
     flex-basis: 45%;
 }
 
-.froga3-box-reverse-conversion {
+.unitConverterControl-box-reverse-conversion {
     flex-basis: 10%;
     border: none;
 }
 
-.froga3-box-InputUnit {
+.unitConverterControl-box-InputUnit {
     flex-basis: 45%;
 }
 
-.froga3-box-save {
+.unitConverterControl-box-save {
     flex-basis: 10%;
 }
 
-.froga3-box-gap {
+.unitConverterControl-box-gap {
     flex-basis: 45%;
 }
 
-.froga3-box-OutputUnit {
+.unitConverterControl-box-OutputUnit {
     flex-basis: 45%;
     border-color: white;
 }
@@ -94,7 +94,7 @@ input[type=number] {
 /* ------------------------------------- */
 
 @media (max-width: 480px) {
-    [class^=froga3-row-] {
+    [class^=unitConverterControl-row-] {
       flex-direction: column;
     }
 }

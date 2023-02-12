@@ -14,7 +14,8 @@ const componentStyle = {
     color: 'white',
     background: '#2E0039',
     'padding-left': '10px',
-    'marging-bottom': '10px'
+    'marging-bottom': '10px',
+    cursor: 'pointer'
 }
 
 const SaveBtn = () => {
