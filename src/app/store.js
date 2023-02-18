@@ -3,16 +3,6 @@ import unitConversionReducer from '../features/unitConversions/unitConversionSli
 import {loadState, saveState} from './localStorage'
 import { initialState } from "../features/unitConversions/unitConversionSlice";
 
-
-// const store = configureStore({
-//     reducer: {
-//         unitConversion: unitConversionReducer
-//     }
-// })
-
-// export default store
-
-
 const getInitialData = (initialState) => {
     const initialData = loadState()
     if (initialData === null) {

@@ -23,12 +23,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    /* border: 2px solid black; */
     border-radius: 10px;
-    /* background-color: #c1c1c1; */
     background: #2E0039;
-
     font-family: sans-serif;
     font-size: 25px;
 }

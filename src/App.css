@@ -102,47 +102,6 @@ input {
 
 .in-out-box {
   width: 90%;
-  /* display: flex; */
   margin: 0 auto;
-  /* justify-content: space-between; */
   justify-content: space-around;
-}
-
-/*  ------- Responsive -------  */
-
-@media (max-width: 400px) {
-
-  .App {
-    width: 90%;
-  }
-
-  .header h1 {
-    font-size: 20px;
-  }
-
-  input {
-    font-size: 25px;
-    padding: 5px;
-    width: 120px;
-  }
-
-  .select-heart {
-    padding: 20px 15px;
-  }
-}
-
-@media (min-width: 768px) {
-
-  .App {
-    width: 60%;
-  }
-}
-
-@media (min-width: 1200px) {
-
-  input {
-    font-size: 50px;
-    padding: 5px;
-    width: 300px;
-  }
 }
