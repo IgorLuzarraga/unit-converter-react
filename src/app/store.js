@@ -1,13 +1,39 @@
 import {configureStore} from '@reduxjs/toolkit'
 import unitConversionReducer from '../features/unitConversions/unitConversionSlice.js'
+import {loadState, saveState} from './localStorage'
+import { initialState } from "../features/unitConversions/unitConversionSlice";
 
-const store = configureStore({
+
+// const store = configureStore({
+//     reducer: {
+//         unitConversion: unitConversionReducer
+//     }
+// })
+
+// export default store
+
+
+const getInitialData = (initialState) => {
+    const initialData = loadState()
+    if (initialData === null) {
+      return initialState
+    } else {
+      return initialData
+    }
+  }
+  
+  const initialData = getInitialData(initialState)
+  
+  const store =  configureStore({
     reducer: {
         unitConversion: unitConversionReducer
-    }
-})
-
-export default store
-
-
+    },
+    preloadedState: initialData
+  })
+  
+  store.subscribe( function () {
+    saveState(store.getState())
+  })
+  
+export default store  
 

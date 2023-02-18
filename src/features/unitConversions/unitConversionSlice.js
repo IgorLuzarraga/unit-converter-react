@@ -173,3 +173,5 @@ export const {
   saveConversion,
   setFromUnitVal
 } = unitConversionSlice.actions
+
+export { initialState }
